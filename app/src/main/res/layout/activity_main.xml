@@ -27,75 +27,60 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
-        android:layout_width="416dp"
-        android:layout_height="171dp"
+        android:layout_width="413dp"
+        android:layout_height="603dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.599"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.1">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="200dp"
+                card_view:cardElevation="10dp"
+                card_view:cardCornerRadius="5dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="b;kbvsdfv" />
+                <TextView
+                    android:id="@+id/info_text"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/black"
+                    android:text="Hi mama mia"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
+            <!-- TODO: include recycler view with a card view in order to show all the shopping lists-->
+            <!-- TODO: include an alert box whcih takes input which is the shopping list's name and create a shopping list which is visible on the main activity-->
+<!--            TODO:maybe integrate bigbasket for the items which were not found in the supermarket-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="a;kbvsdfv" />
         </LinearLayout>
 
+<!--        TODO: to show all the previous purchases of the user-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"/>
+
+
+        </LinearLayout>
 
     </ScrollView>
 
@@ -104,6 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add shopping lists"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
